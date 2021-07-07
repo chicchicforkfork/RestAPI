@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -m64 -std=c++17  -shared -Wl,-soname,librestapi.so -o librestapi.so CMakeFiles/restapi.dir/src/endpoint.cpp.o CMakeFiles/restapi.dir/src/restapi.cpp.o  -lcpprest -lssl -lcrypto 

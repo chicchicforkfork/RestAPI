@@ -1,0 +1,215 @@
+\hypertarget{classchkchk_1_1RestApi}{}\doxysection{chkchk\+::Rest\+Api 클래스 참조}
+\label{classchkchk_1_1RestApi}\index{chkchk::RestApi@{chkchk::RestApi}}
+
+
+\mbox{\hyperlink{classchkchk_1_1RestApi}{Rest\+Api}} 정의된 A\+P\+I를 추가하고 서버를 동작시킨다.  
+
+
+
+
+{\ttfamily \#include $<$restapi.\+h$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classchkchk_1_1RestApi_a53a2121998ba822eb86c535547a0ca35}{Rest\+Api}} (const std\+::string \&address, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Rest\+A\+PI 생성자 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classchkchk_1_1RestApi_af2ea2c30a01ab5a544cd78893d76f612}{$\sim$\+Rest\+Api}} ()
+\begin{DoxyCompactList}\small\item\em Rest\+A\+PI 소멸자 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classchkchk_1_1RestApi_a9576df4675ba6454cdbab409f8597503}{endpoint\+Tables}} ()
+\item 
+void \mbox{\hyperlink{classchkchk_1_1RestApi_abaa62f4424770ae5aa8a9afadc49f8ac}{set\+Address}} (const std\+::string \&address)
+\begin{DoxyCompactList}\small\item\em A\+PI url 주소 입력 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classchkchk_1_1RestApi_a8eadb101a37c8962d23f3a95313a4cae}{on\+\_\+initialize}} ()
+\begin{DoxyCompactList}\small\item\em A\+PI 서버 실행 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classchkchk_1_1RestApi_a4966d7a1535cddc2ffbc01f2b89d6f84}{on\+\_\+shutdown}} ()
+\begin{DoxyCompactList}\small\item\em A\+PI 서버 종료 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classchkchk_1_1RestApi_a00cee8cf6cabcd2696b227eab0adf686}{add\+A\+PI}} (\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937f}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} method, const utility\+::string\+\_\+t path, \mbox{\hyperlink{namespacechkchk_ad5edf8c716b39df35ac77fc7e8cfbf9f}{endpoint\+\_\+handler\+\_\+t}} handle)
+\begin{DoxyCompactList}\small\item\em A\+PI 정의 추가 (H\+T\+TP Method별 U\+R\+L에 맵핑되는 A\+PI 동작 정의 추가) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classchkchk_1_1RestApi_a331d12bf6874e51957c0748e2ebea0b5}{\+\_\+name}}
+\item 
+std\+::string \mbox{\hyperlink{classchkchk_1_1RestApi_ad35dd8e1e73abf41110123016456dae9}{\+\_\+address}}
+\begin{DoxyCompactList}\small\item\em A\+PI 서버 주소 (포트까지 포함) \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classchkchk_1_1Endpoint}{Endpoint}} $>$ \mbox{\hyperlink{classchkchk_1_1RestApi_abecbd48d2de48997972b0ad964ca9975}{\+\_\+endpoint}}
+\begin{DoxyCompactList}\small\item\em U\+R\+L에 맵핑된 A\+PI 호출 동작 정의 객체 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\mbox{\hyperlink{classchkchk_1_1RestApi}{Rest\+Api}} 정의된 A\+P\+I를 추가하고 서버를 동작시킨다. 
+
+restapi.\+h 파일의 12 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classchkchk_1_1RestApi_a53a2121998ba822eb86c535547a0ca35}\label{classchkchk_1_1RestApi_a53a2121998ba822eb86c535547a0ca35}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!RestApi@{RestApi}}
+\index{RestApi@{RestApi}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{RestApi()}{RestApi()}}
+{\footnotesize\ttfamily Rest\+Api\+::\+Rest\+Api (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Rest\+A\+PI 생성자 
+
+
+\begin{DoxyParams}{매개변수}
+{\em address} & \\
+\hline
+\end{DoxyParams}
+
+
+restapi.\+cpp 파일의 16 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1RestApi_af2ea2c30a01ab5a544cd78893d76f612}\label{classchkchk_1_1RestApi_af2ea2c30a01ab5a544cd78893d76f612}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!````~RestApi@{$\sim$RestApi}}
+\index{````~RestApi@{$\sim$RestApi}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{$\sim$RestApi()}{~RestApi()}}
+{\footnotesize\ttfamily Rest\+Api\+::$\sim$\+Rest\+Api (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rest\+A\+PI 소멸자 
+
+
+
+restapi.\+cpp 파일의 21 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classchkchk_1_1RestApi_a00cee8cf6cabcd2696b227eab0adf686}\label{classchkchk_1_1RestApi_a00cee8cf6cabcd2696b227eab0adf686}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!addAPI@{addAPI}}
+\index{addAPI@{addAPI}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{addAPI()}{addAPI()}}
+{\footnotesize\ttfamily bool chkchk\+::\+Rest\+Api\+::add\+A\+PI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937f}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}]{method,  }\item[{const utility\+::string\+\_\+t}]{path,  }\item[{\mbox{\hyperlink{namespacechkchk_ad5edf8c716b39df35ac77fc7e8cfbf9f}{endpoint\+\_\+handler\+\_\+t}}}]{handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A\+PI 정의 추가 (H\+T\+TP Method별 U\+R\+L에 맵핑되는 A\+PI 동작 정의 추가) 
+
+
+\begin{DoxyParams}{매개변수}
+{\em method} & G\+E\+T/\+P\+O\+S\+T/\+P\+U\+T/\+D\+EL \\
+\hline
+{\em path} & url (endpoint) \\
+\hline
+{\em handle} & A\+PI 호출 시 동작하는 함수 정의 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false\+\_\+api\+\_\+handler 
+\end{DoxyReturn}
+
+
+restapi.\+h 파일의 58 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1RestApi_a9576df4675ba6454cdbab409f8597503}\label{classchkchk_1_1RestApi_a9576df4675ba6454cdbab409f8597503}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!endpointTables@{endpointTables}}
+\index{endpointTables@{endpointTables}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{endpointTables()}{endpointTables()}}
+{\footnotesize\ttfamily std\+::string chkchk\+::\+Rest\+Api\+::endpoint\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+restapi.\+h 파일의 32 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1RestApi_a8eadb101a37c8962d23f3a95313a4cae}\label{classchkchk_1_1RestApi_a8eadb101a37c8962d23f3a95313a4cae}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!on\_initialize@{on\_initialize}}
+\index{on\_initialize@{on\_initialize}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{on\_initialize()}{on\_initialize()}}
+{\footnotesize\ttfamily void Rest\+Api\+::on\+\_\+initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A\+PI 서버 실행 
+
+
+
+restapi.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1RestApi_a4966d7a1535cddc2ffbc01f2b89d6f84}\label{classchkchk_1_1RestApi_a4966d7a1535cddc2ffbc01f2b89d6f84}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!on\_shutdown@{on\_shutdown}}
+\index{on\_shutdown@{on\_shutdown}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{on\_shutdown()}{on\_shutdown()}}
+{\footnotesize\ttfamily void Rest\+Api\+::on\+\_\+shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A\+PI 서버 종료 
+
+
+
+restapi.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1RestApi_abaa62f4424770ae5aa8a9afadc49f8ac}\label{classchkchk_1_1RestApi_abaa62f4424770ae5aa8a9afadc49f8ac}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{setAddress()}{setAddress()}}
+{\footnotesize\ttfamily void Rest\+Api\+::set\+Address (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+
+
+A\+PI url 주소 입력 
+
+
+\begin{DoxyParams}{매개변수}
+{\em address} & \\
+\hline
+\end{DoxyParams}
+
+
+restapi.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classchkchk_1_1RestApi_ad35dd8e1e73abf41110123016456dae9}\label{classchkchk_1_1RestApi_ad35dd8e1e73abf41110123016456dae9}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!\_address@{\_address}}
+\index{\_address@{\_address}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{\_address}{\_address}}
+{\footnotesize\ttfamily std\+::string chkchk\+::\+Rest\+Api\+::\+\_\+address\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A\+PI 서버 주소 (포트까지 포함) 
+
+
+
+restapi.\+h 파일의 16 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1RestApi_abecbd48d2de48997972b0ad964ca9975}\label{classchkchk_1_1RestApi_abecbd48d2de48997972b0ad964ca9975}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!\_endpoint@{\_endpoint}}
+\index{\_endpoint@{\_endpoint}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{\_endpoint}{\_endpoint}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classchkchk_1_1Endpoint}{Endpoint}}$>$ chkchk\+::\+Rest\+Api\+::\+\_\+endpoint\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+U\+R\+L에 맵핑된 A\+PI 호출 동작 정의 객체 
+
+
+
+restapi.\+h 파일의 18 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1RestApi_a331d12bf6874e51957c0748e2ebea0b5}\label{classchkchk_1_1RestApi_a331d12bf6874e51957c0748e2ebea0b5}} 
+\index{chkchk::RestApi@{chkchk::RestApi}!\_name@{\_name}}
+\index{\_name@{\_name}!chkchk::RestApi@{chkchk::RestApi}}
+\doxysubsubsection{\texorpdfstring{\_name}{\_name}}
+{\footnotesize\ttfamily std\+::string chkchk\+::\+Rest\+Api\+::\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+restapi.\+h 파일의 14 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{restapi_8h}{restapi.\+h}}\item 
+src/\mbox{\hyperlink{restapi_8cpp}{restapi.\+cpp}}\end{DoxyCompactItemize}

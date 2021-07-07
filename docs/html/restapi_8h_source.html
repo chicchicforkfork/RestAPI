@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>restapi: include/restapi.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">restapi
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">restapi.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="restapi_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SOSO_REST_API__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SOSO_REST_API__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="endpoint_8h.html">endpoint.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacechkchk.html">chkchk</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classchkchk_1_1RestApi.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classchkchk_1_1RestApi.html">RestApi</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classchkchk_1_1RestApi.html#a331d12bf6874e51957c0748e2ebea0b5">   14</a></span>&#160;  std::string <a class="code" href="classchkchk_1_1RestApi.html#a331d12bf6874e51957c0748e2ebea0b5">_name</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classchkchk_1_1RestApi.html#ad35dd8e1e73abf41110123016456dae9">   16</a></span>&#160;  std::string <a class="code" href="classchkchk_1_1RestApi.html#ad35dd8e1e73abf41110123016456dae9">_address</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classchkchk_1_1RestApi.html#abecbd48d2de48997972b0ad964ca9975">   18</a></span>&#160;  std::unique_ptr&lt;Endpoint&gt; <a class="code" href="classchkchk_1_1RestApi.html#abecbd48d2de48997972b0ad964ca9975">_endpoint</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classchkchk_1_1RestApi.html#a53a2121998ba822eb86c535547a0ca35">RestApi</a>(<span class="keyword">const</span> std::string &amp;address, <span class="keyword">const</span> std::string &amp;name);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classchkchk_1_1RestApi.html#af2ea2c30a01ab5a544cd78893d76f612">~RestApi</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classchkchk_1_1RestApi.html#a9576df4675ba6454cdbab409f8597503">   32</a></span>&#160;  std::string <a class="code" href="classchkchk_1_1RestApi.html#a9576df4675ba6454cdbab409f8597503">endpointTables</a>() { <span class="keywordflow">return</span> <a class="code" href="classchkchk_1_1RestApi.html#abecbd48d2de48997972b0ad964ca9975">_endpoint</a>-&gt;endpointTables(); }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchkchk_1_1RestApi.html#abaa62f4424770ae5aa8a9afadc49f8ac">setAddress</a>(<span class="keyword">const</span> std::string &amp;address);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchkchk_1_1RestApi.html#a8eadb101a37c8962d23f3a95313a4cae">on_initialize</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchkchk_1_1RestApi.html#a4966d7a1535cddc2ffbc01f2b89d6f84">on_shutdown</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classchkchk_1_1RestApi.html#a00cee8cf6cabcd2696b227eab0adf686">   58</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classchkchk_1_1RestApi.html#a00cee8cf6cabcd2696b227eab0adf686">addAPI</a>(<a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937f">API_METHOD</a> method,            <span class="comment">//</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;              <span class="keyword">const</span> utility::string_t path, <span class="comment">//</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;              <a class="code" href="namespacechkchk.html#ad5edf8c716b39df35ac77fc7e8cfbf9f">endpoint_handler_t</a> handle) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classchkchk_1_1RestApi.html#abecbd48d2de48997972b0ad964ca9975">_endpoint</a>-&gt;addEndpoint(method, path, handle);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}; <span class="comment">// namespace chkchk</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespacechkchk_html_ad5edf8c716b39df35ac77fc7e8cfbf9f"><div class="ttname"><a href="namespacechkchk.html#ad5edf8c716b39df35ac77fc7e8cfbf9f">chkchk::endpoint_handler_t</a></div><div class="ttdeci">std::function&lt; const utility::string_t(const web::http::http_request &amp;, const web::json::value &amp;)&gt; endpoint_handler_t</div><div class="ttdoc">rest api 수행 함수 타입</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00022">endpoint.h:22</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_a00cee8cf6cabcd2696b227eab0adf686"><div class="ttname"><a href="classchkchk_1_1RestApi.html#a00cee8cf6cabcd2696b227eab0adf686">chkchk::RestApi::addAPI</a></div><div class="ttdeci">bool addAPI(API_METHOD method, const utility::string_t path, endpoint_handler_t handle)</div><div class="ttdoc">API 정의 추가 (HTTP Method별 URL에 맵핑되는 API 동작 정의 추가)</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8h_source.html#l00058">restapi.h:58</a></div></div>
+<div class="ttc" id="anamespacechkchk_html"><div class="ttname"><a href="namespacechkchk.html">chkchk</a></div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00014">endpoint.h:14</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html"><div class="ttname"><a href="classchkchk_1_1RestApi.html">chkchk::RestApi</a></div><div class="ttdoc">RestApi 정의된 API를 추가하고 서버를 동작시킨다.</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8h_source.html#l00012">restapi.h:12</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_abaa62f4424770ae5aa8a9afadc49f8ac"><div class="ttname"><a href="classchkchk_1_1RestApi.html#abaa62f4424770ae5aa8a9afadc49f8ac">chkchk::RestApi::setAddress</a></div><div class="ttdeci">void setAddress(const std::string &amp;address)</div><div class="ttdoc">API url 주소 입력</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8cpp_source.html#l00027">restapi.cpp:27</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_ad35dd8e1e73abf41110123016456dae9"><div class="ttname"><a href="classchkchk_1_1RestApi.html#ad35dd8e1e73abf41110123016456dae9">chkchk::RestApi::_address</a></div><div class="ttdeci">std::string _address</div><div class="ttdoc">API 서버 주소 (포트까지 포함)</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8h_source.html#l00016">restapi.h:16</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_a331d12bf6874e51957c0748e2ebea0b5"><div class="ttname"><a href="classchkchk_1_1RestApi.html#a331d12bf6874e51957c0748e2ebea0b5">chkchk::RestApi::_name</a></div><div class="ttdeci">std::string _name</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8h_source.html#l00014">restapi.h:14</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_a4966d7a1535cddc2ffbc01f2b89d6f84"><div class="ttname"><a href="classchkchk_1_1RestApi.html#a4966d7a1535cddc2ffbc01f2b89d6f84">chkchk::RestApi::on_shutdown</a></div><div class="ttdeci">void on_shutdown()</div><div class="ttdoc">API 서버 종료</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8cpp_source.html#l00039">restapi.cpp:39</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_a8eadb101a37c8962d23f3a95313a4cae"><div class="ttname"><a href="classchkchk_1_1RestApi.html#a8eadb101a37c8962d23f3a95313a4cae">chkchk::RestApi::on_initialize</a></div><div class="ttdeci">void on_initialize()</div><div class="ttdoc">API 서버 실행</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8cpp_source.html#l00034">restapi.cpp:34</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_a9576df4675ba6454cdbab409f8597503"><div class="ttname"><a href="classchkchk_1_1RestApi.html#a9576df4675ba6454cdbab409f8597503">chkchk::RestApi::endpointTables</a></div><div class="ttdeci">std::string endpointTables()</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8h_source.html#l00032">restapi.h:32</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_af2ea2c30a01ab5a544cd78893d76f612"><div class="ttname"><a href="classchkchk_1_1RestApi.html#af2ea2c30a01ab5a544cd78893d76f612">chkchk::RestApi::~RestApi</a></div><div class="ttdeci">~RestApi()</div><div class="ttdoc">RestAPI 소멸자</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8cpp_source.html#l00021">restapi.cpp:21</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_a53a2121998ba822eb86c535547a0ca35"><div class="ttname"><a href="classchkchk_1_1RestApi.html#a53a2121998ba822eb86c535547a0ca35">chkchk::RestApi::RestApi</a></div><div class="ttdeci">RestApi(const std::string &amp;address, const std::string &amp;name)</div><div class="ttdoc">RestAPI 생성자</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8cpp_source.html#l00016">restapi.cpp:16</a></div></div>
+<div class="ttc" id="aendpoint_8h_html"><div class="ttname"><a href="endpoint_8h.html">endpoint.h</a></div></div>
+<div class="ttc" id="anamespacechkchk_html_a77389a46f504d7412fad04a4e71c937f"><div class="ttname"><a href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937f">chkchk::API_METHOD</a></div><div class="ttdeci">API_METHOD</div><div class="ttdoc">API 호출 시 HTTP Method 정의</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00027">endpoint.h:27</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1RestApi_html_abecbd48d2de48997972b0ad964ca9975"><div class="ttname"><a href="classchkchk_1_1RestApi.html#abecbd48d2de48997972b0ad964ca9975">chkchk::RestApi::_endpoint</a></div><div class="ttdeci">std::unique_ptr&lt; Endpoint &gt; _endpoint</div><div class="ttdoc">URL에 맵핑된 API 호출 동작 정의 객체</div><div class="ttdef"><b>Definition:</b> <a href="restapi_8h_source.html#l00018">restapi.h:18</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -1,0 +1,52 @@
+\hypertarget{endpoint_8h}{}\doxysection{include/endpoint.h 파일 참조}
+\label{endpoint_8h}\index{include/endpoint.h@{include/endpoint.h}}
+{\ttfamily \#include \char`\"{}cpprest/asyncrt\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/containerstream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/filestream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/http\+\_\+listener.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/json.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/producerconsumerstream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpprest/uri.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+endpoint.\+h에 대한 include 의존 그래프\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{endpoint_8h__incl}
+\end{center}
+\end{figure}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{endpoint_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classchkchk_1_1Endpoint}{chkchk\+::\+Endpoint}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classchkchk_1_1Endpoint}{Endpoint}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacechkchk}{chkchk}}
+\end{DoxyCompactItemize}
+\doxysubsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ const utility\+::string\+\_\+t(const web\+::http\+::http\+\_\+request \&, const web\+::json\+::value \&)$>$ \mbox{\hyperlink{namespacechkchk_ad5edf8c716b39df35ac77fc7e8cfbf9f}{chkchk\+::endpoint\+\_\+handler\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em rest api 수행 함수 타입 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937f}{chkchk\+::\+A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} \{ \newline
+\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937fa2fb4565c6c2178e24026b448cdda20a3}{chkchk\+::\+A\+P\+I\+\_\+\+G\+ET}} = 0, 
+\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937fa3e47a88d118f793f592980916e135806}{chkchk\+::\+A\+P\+I\+\_\+\+P\+UT}}, 
+\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937fab325dcd82bf5bf0fd475d016c91e0abe}{chkchk\+::\+A\+P\+I\+\_\+\+P\+O\+ST}}, 
+\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937fa925680cee7de8e02b8fe06abd78b0d8f}{chkchk\+::\+A\+P\+I\+\_\+\+D\+EL}}, 
+\newline
+\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937fa985ee34532cafb0a52578afb53ccc9ab}{chkchk\+::\+A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE}}
+ \}
+\begin{DoxyCompactList}\small\item\em A\+PI 호출 시 H\+T\+TP Method 정의 \end{DoxyCompactList}\end{DoxyCompactItemize}

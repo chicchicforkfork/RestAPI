@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/CMakeFiles/nlohmann-populate"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/CMakeFiles/nlohmann-populate.rule"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/CMakeFiles/nlohmann-populate-complete.rule"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/nlohmann-populate-prefix/src/nlohmann-populate-stamp/nlohmann-populate-install.rule"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/nlohmann-populate-prefix/src/nlohmann-populate-stamp/nlohmann-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/nlohmann-populate-prefix/src/nlohmann-populate-stamp/nlohmann-populate-download.rule"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/nlohmann-populate-prefix/src/nlohmann-populate-stamp/nlohmann-populate-update.rule"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/nlohmann-populate-prefix/src/nlohmann-populate-stamp/nlohmann-populate-patch.rule"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/nlohmann-populate-prefix/src/nlohmann-populate-stamp/nlohmann-populate-configure.rule"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/nlohmann-populate-prefix/src/nlohmann-populate-stamp/nlohmann-populate-build.rule"
+		},
+		{
+			"file" : "/home/secui/git/RestAPI/build/_deps/nlohmann-subbuild/nlohmann-populate-prefix/src/nlohmann-populate-stamp/nlohmann-populate-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"nlohmann-populate"
+		],
+		"name" : "nlohmann-populate"
+	}
+}

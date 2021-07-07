@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>restapi: include/endpoint.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">restapi
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">endpoint.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="endpoint_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __SOSO_ENDPOINT__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __SOSO_ENDPOINT__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;cpprest/asyncrt_utils.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;cpprest/containerstream.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;cpprest/filestream.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;cpprest/http_listener.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;cpprest/json.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;cpprest/producerconsumerstream.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;cpprest/uri.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="namespacechkchk.html">   14</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacechkchk.html">chkchk</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">typedef</span> std::function&lt;       <span class="comment">//</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">const</span> utility::string_t( <span class="comment">//</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">const</span> web::http::http_request &amp;, <span class="keyword">const</span> web::json::value &amp;)&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespacechkchk.html#ad5edf8c716b39df35ac77fc7e8cfbf9f">   22</a></span>&#160;    <a class="code" href="namespacechkchk.html#ad5edf8c716b39df35ac77fc7e8cfbf9f">endpoint_handler_t</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937f">   27</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937f">API_METHOD</a> { <span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa2fb4565c6c2178e24026b448cdda20a3">   28</a></span>&#160;  <a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa2fb4565c6c2178e24026b448cdda20a3">API_GET</a> = 0,</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa3e47a88d118f793f592980916e135806">   29</a></span>&#160;  <a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa3e47a88d118f793f592980916e135806">API_PUT</a>,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fab325dcd82bf5bf0fd475d016c91e0abe">   30</a></span>&#160;  <a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fab325dcd82bf5bf0fd475d016c91e0abe">API_POST</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa925680cee7de8e02b8fe06abd78b0d8f">   31</a></span>&#160;  <a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa925680cee7de8e02b8fe06abd78b0d8f">API_DEL</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa985ee34532cafb0a52578afb53ccc9ab">   32</a></span>&#160;  <a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa985ee34532cafb0a52578afb53ccc9ab">API_METHOD_SIZE</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classchkchk_1_1Endpoint.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="classchkchk_1_1Endpoint.html">Endpoint</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchkchk_1_1Endpoint.html#a6c07b57c4c28d8f1a8393947b8d76ad1">get</a>(web::http::http_request message);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchkchk_1_1Endpoint.html#af45278a6507f58b0e8439828e2ac7a19">put</a>(web::http::http_request message);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchkchk_1_1Endpoint.html#a9bea1a169c63b2ee9c84c6b2eba86d0c">post</a>(web::http::http_request message);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchkchk_1_1Endpoint.html#a1e811ae341ead064bfad2035fb54f713">del</a>(web::http::http_request message);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchkchk_1_1Endpoint.html#a8d295b433f06c0d58b6bdd2c4853d751">callapi</a>(<a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937f">API_METHOD</a> method, web::http::http_request message);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classchkchk_1_1Endpoint.html#a5fa632c478317c17f5cc2ff6ff5181c3">   48</a></span>&#160;  web::http::experimental::listener::http_listener <a class="code" href="classchkchk_1_1Endpoint.html#a5fa632c478317c17f5cc2ff6ff5181c3">_listener</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classchkchk_1_1Endpoint.html#a562f4435454ba0d8e61e3769deb534ec">   50</a></span>&#160;  std::map&lt;utility::string_t, endpoint_handler_t&gt; <a class="code" href="classchkchk_1_1Endpoint.html#a562f4435454ba0d8e61e3769deb534ec">_tables</a>[<a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa985ee34532cafb0a52578afb53ccc9ab">API_METHOD_SIZE</a>];</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classchkchk_1_1Endpoint.html#ac074779e09d18154bc766ff702bc186a">   52</a></span>&#160;  <span class="keywordtype">size_t</span> <a class="code" href="classchkchk_1_1Endpoint.html#ac074779e09d18154bc766ff702bc186a">_listen_thread_num</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classchkchk_1_1Endpoint.html#a98f734acc05014f6fecf53befad70b90">Endpoint</a>(utility::string_t url, <span class="keywordtype">size_t</span> listen_thread_num = 4);</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classchkchk_1_1Endpoint.html#a2e4ec63bb2f86bf84725a1f85c66c945">   56</a></span>&#160;  <a class="code" href="classchkchk_1_1Endpoint.html#a2e4ec63bb2f86bf84725a1f85c66c945">~Endpoint</a>() {}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classchkchk_1_1Endpoint.html#a6eb516954f062365567c5c4ed1097edb">   58</a></span>&#160;  std::string <a class="code" href="classchkchk_1_1Endpoint.html#a6eb516954f062365567c5c4ed1097edb">endpointTables</a>() {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    std::string result = <span class="stringliteral">&quot;[Endpoint::report]\n&quot;</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;table : <a class="code" href="classchkchk_1_1Endpoint.html#a562f4435454ba0d8e61e3769deb534ec">_tables</a>) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;m : table) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">auto</span> get_path_name = [](<span class="keywordtype">int</span> i) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keywordflow">switch</span> (i) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;GET&quot;</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;PUT&quot;</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;POST&quot;</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;          <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;DEL&quot;</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        };</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        result += get_path_name(i);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        result += <span class="stringliteral">&quot;:&quot;</span> + m.first + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      i++;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classchkchk_1_1Endpoint.html#a63bb00429d6349a5e400548b13d907ed">   90</a></span>&#160;  pplx::task&lt;void&gt; <a class="code" href="classchkchk_1_1Endpoint.html#a63bb00429d6349a5e400548b13d907ed">open</a>() { <span class="keywordflow">return</span> <a class="code" href="classchkchk_1_1Endpoint.html#a5fa632c478317c17f5cc2ff6ff5181c3">_listener</a>.open(); }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classchkchk_1_1Endpoint.html#a756003bcc3929f70ded6584ddc7f6834">   96</a></span>&#160;  pplx::task&lt;void&gt; <a class="code" href="classchkchk_1_1Endpoint.html#a756003bcc3929f70ded6584ddc7f6834">close</a>() { <span class="keywordflow">return</span> <a class="code" href="classchkchk_1_1Endpoint.html#a5fa632c478317c17f5cc2ff6ff5181c3">_listener</a>.close(); }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classchkchk_1_1Endpoint.html#a67ccfb626e00cf065b7d6bfe840cecd5">addEndpoint</a>(<a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937f">API_METHOD</a> method,            <span class="comment">//</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                   <span class="keyword">const</span> utility::string_t path, <span class="comment">//</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                   <a class="code" href="namespacechkchk.html#ad5edf8c716b39df35ac77fc7e8cfbf9f">endpoint_handler_t</a> handle);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <a class="code" href="namespacechkchk.html#ad5edf8c716b39df35ac77fc7e8cfbf9f">endpoint_handler_t</a> *           <span class="comment">//</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <a class="code" href="classchkchk_1_1Endpoint.html#a7bbbc03ba7d2cb9cde3b5b5bad963a0c">getEndpoint</a>(<a class="code" href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937f">API_METHOD</a> method, <span class="comment">//</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;              <span class="keyword">const</span> utility::string_t path);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;};</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}; <span class="comment">// namespace chkchk</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespacechkchk_html_ad5edf8c716b39df35ac77fc7e8cfbf9f"><div class="ttname"><a href="namespacechkchk.html#ad5edf8c716b39df35ac77fc7e8cfbf9f">chkchk::endpoint_handler_t</a></div><div class="ttdeci">std::function&lt; const utility::string_t(const web::http::http_request &amp;, const web::json::value &amp;)&gt; endpoint_handler_t</div><div class="ttdoc">rest api 수행 함수 타입</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00022">endpoint.h:22</a></div></div>
+<div class="ttc" id="anamespacechkchk_html_a77389a46f504d7412fad04a4e71c937fab325dcd82bf5bf0fd475d016c91e0abe"><div class="ttname"><a href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fab325dcd82bf5bf0fd475d016c91e0abe">chkchk::API_POST</a></div><div class="ttdeci">@ API_POST</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00030">endpoint.h:30</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a7bbbc03ba7d2cb9cde3b5b5bad963a0c"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a7bbbc03ba7d2cb9cde3b5b5bad963a0c">chkchk::Endpoint::getEndpoint</a></div><div class="ttdeci">endpoint_handler_t * getEndpoint(API_METHOD method, const utility::string_t path)</div><div class="ttdoc">rest api endpoint 핸들 반환</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8cpp_source.html#l00051">endpoint.cpp:51</a></div></div>
+<div class="ttc" id="anamespacechkchk_html"><div class="ttname"><a href="namespacechkchk.html">chkchk</a></div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00014">endpoint.h:14</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a63bb00429d6349a5e400548b13d907ed"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a63bb00429d6349a5e400548b13d907ed">chkchk::Endpoint::open</a></div><div class="ttdeci">pplx::task&lt; void &gt; open()</div><div class="ttdoc">rest api 서버 시작</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00090">endpoint.h:90</a></div></div>
+<div class="ttc" id="anamespacechkchk_html_a77389a46f504d7412fad04a4e71c937fa985ee34532cafb0a52578afb53ccc9ab"><div class="ttname"><a href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa985ee34532cafb0a52578afb53ccc9ab">chkchk::API_METHOD_SIZE</a></div><div class="ttdeci">@ API_METHOD_SIZE</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00032">endpoint.h:32</a></div></div>
+<div class="ttc" id="anamespacechkchk_html_a77389a46f504d7412fad04a4e71c937fa2fb4565c6c2178e24026b448cdda20a3"><div class="ttname"><a href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa2fb4565c6c2178e24026b448cdda20a3">chkchk::API_GET</a></div><div class="ttdeci">@ API_GET</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00028">endpoint.h:28</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a67ccfb626e00cf065b7d6bfe840cecd5"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a67ccfb626e00cf065b7d6bfe840cecd5">chkchk::Endpoint::addEndpoint</a></div><div class="ttdeci">bool addEndpoint(API_METHOD method, const utility::string_t path, endpoint_handler_t handle)</div><div class="ttdoc">rest api 서비스 등록</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8cpp_source.html#l00040">endpoint.cpp:40</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html"><div class="ttname"><a href="classchkchk_1_1Endpoint.html">chkchk::Endpoint</a></div><div class="ttdoc">Endpoint</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00038">endpoint.h:38</a></div></div>
+<div class="ttc" id="anamespacechkchk_html_a77389a46f504d7412fad04a4e71c937fa3e47a88d118f793f592980916e135806"><div class="ttname"><a href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa3e47a88d118f793f592980916e135806">chkchk::API_PUT</a></div><div class="ttdeci">@ API_PUT</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00029">endpoint.h:29</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a6c07b57c4c28d8f1a8393947b8d76ad1"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a6c07b57c4c28d8f1a8393947b8d76ad1">chkchk::Endpoint::get</a></div><div class="ttdeci">void get(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8cpp_source.html#l00068">endpoint.cpp:68</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a8d295b433f06c0d58b6bdd2c4853d751"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a8d295b433f06c0d58b6bdd2c4853d751">chkchk::Endpoint::callapi</a></div><div class="ttdeci">void callapi(API_METHOD method, web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8cpp_source.html#l00070">endpoint.cpp:70</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a562f4435454ba0d8e61e3769deb534ec"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a562f4435454ba0d8e61e3769deb534ec">chkchk::Endpoint::_tables</a></div><div class="ttdeci">std::map&lt; utility::string_t, endpoint_handler_t &gt; _tables[API_METHOD_SIZE]</div><div class="ttdoc">API 동작 정의 테이블 (GET/POST/PUT/DEL 각 각 정의)</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00050">endpoint.h:50</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a756003bcc3929f70ded6584ddc7f6834"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a756003bcc3929f70ded6584ddc7f6834">chkchk::Endpoint::close</a></div><div class="ttdeci">pplx::task&lt; void &gt; close()</div><div class="ttdoc">rest api 서버 종료</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00096">endpoint.h:96</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_ac074779e09d18154bc766ff702bc186a"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#ac074779e09d18154bc766ff702bc186a">chkchk::Endpoint::_listen_thread_num</a></div><div class="ttdeci">size_t _listen_thread_num</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00052">endpoint.h:52</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a9bea1a169c63b2ee9c84c6b2eba86d0c"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a9bea1a169c63b2ee9c84c6b2eba86d0c">chkchk::Endpoint::post</a></div><div class="ttdeci">void post(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8cpp_source.html#l00060">endpoint.cpp:60</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a5fa632c478317c17f5cc2ff6ff5181c3"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a5fa632c478317c17f5cc2ff6ff5181c3">chkchk::Endpoint::_listener</a></div><div class="ttdeci">web::http::experimental::listener::http_listener _listener</div><div class="ttdoc">cpprestsdk API 서버 리스너</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00048">endpoint.h:48</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a1e811ae341ead064bfad2035fb54f713"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a1e811ae341ead064bfad2035fb54f713">chkchk::Endpoint::del</a></div><div class="ttdeci">void del(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8cpp_source.html#l00064">endpoint.cpp:64</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a6eb516954f062365567c5c4ed1097edb"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a6eb516954f062365567c5c4ed1097edb">chkchk::Endpoint::endpointTables</a></div><div class="ttdeci">std::string endpointTables()</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00058">endpoint.h:58</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a2e4ec63bb2f86bf84725a1f85c66c945"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a2e4ec63bb2f86bf84725a1f85c66c945">chkchk::Endpoint::~Endpoint</a></div><div class="ttdeci">~Endpoint()</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00056">endpoint.h:56</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_af45278a6507f58b0e8439828e2ac7a19"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#af45278a6507f58b0e8439828e2ac7a19">chkchk::Endpoint::put</a></div><div class="ttdeci">void put(web::http::http_request message)</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8cpp_source.html#l00066">endpoint.cpp:66</a></div></div>
+<div class="ttc" id="anamespacechkchk_html_a77389a46f504d7412fad04a4e71c937f"><div class="ttname"><a href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937f">chkchk::API_METHOD</a></div><div class="ttdeci">API_METHOD</div><div class="ttdoc">API 호출 시 HTTP Method 정의</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00027">endpoint.h:27</a></div></div>
+<div class="ttc" id="aclasschkchk_1_1Endpoint_html_a98f734acc05014f6fecf53befad70b90"><div class="ttname"><a href="classchkchk_1_1Endpoint.html#a98f734acc05014f6fecf53befad70b90">chkchk::Endpoint::Endpoint</a></div><div class="ttdeci">Endpoint(utility::string_t url, size_t listen_thread_num=4)</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8cpp_source.html#l00012">endpoint.cpp:12</a></div></div>
+<div class="ttc" id="anamespacechkchk_html_a77389a46f504d7412fad04a4e71c937fa925680cee7de8e02b8fe06abd78b0d8f"><div class="ttname"><a href="namespacechkchk.html#a77389a46f504d7412fad04a4e71c937fa925680cee7de8e02b8fe06abd78b0d8f">chkchk::API_DEL</a></div><div class="ttdeci">@ API_DEL</div><div class="ttdef"><b>Definition:</b> <a href="endpoint_8h_source.html#l00031">endpoint.h:31</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

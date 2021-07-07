@@ -1,0 +1,280 @@
+\hypertarget{classchkchk_1_1Endpoint}{}\doxysection{chkchk\+::Endpoint 클래스 참조}
+\label{classchkchk_1_1Endpoint}\index{chkchk::Endpoint@{chkchk::Endpoint}}
+
+
+\mbox{\hyperlink{classchkchk_1_1Endpoint}{Endpoint}}  
+
+
+
+
+{\ttfamily \#include $<$endpoint.\+h$>$}
+
+\doxysubsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classchkchk_1_1Endpoint_a98f734acc05014f6fecf53befad70b90}{Endpoint}} (utility\+::string\+\_\+t url, size\+\_\+t listen\+\_\+thread\+\_\+num=4)
+\item 
+\mbox{\hyperlink{classchkchk_1_1Endpoint_a2e4ec63bb2f86bf84725a1f85c66c945}{$\sim$\+Endpoint}} ()
+\item 
+std\+::string \mbox{\hyperlink{classchkchk_1_1Endpoint_a6eb516954f062365567c5c4ed1097edb}{endpoint\+Tables}} ()
+\item 
+pplx\+::task$<$ void $>$ \mbox{\hyperlink{classchkchk_1_1Endpoint_a63bb00429d6349a5e400548b13d907ed}{open}} ()
+\begin{DoxyCompactList}\small\item\em rest api 서버 시작 \end{DoxyCompactList}\item 
+pplx\+::task$<$ void $>$ \mbox{\hyperlink{classchkchk_1_1Endpoint_a756003bcc3929f70ded6584ddc7f6834}{close}} ()
+\begin{DoxyCompactList}\small\item\em rest api 서버 종료 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classchkchk_1_1Endpoint_a67ccfb626e00cf065b7d6bfe840cecd5}{add\+Endpoint}} (\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937f}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} method, const utility\+::string\+\_\+t path, \mbox{\hyperlink{namespacechkchk_ad5edf8c716b39df35ac77fc7e8cfbf9f}{endpoint\+\_\+handler\+\_\+t}} handle)
+\begin{DoxyCompactList}\small\item\em rest api 서비스 등록 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacechkchk_ad5edf8c716b39df35ac77fc7e8cfbf9f}{endpoint\+\_\+handler\+\_\+t}} $\ast$ \mbox{\hyperlink{classchkchk_1_1Endpoint_a7bbbc03ba7d2cb9cde3b5b5bad963a0c}{get\+Endpoint}} (\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937f}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} method, const utility\+::string\+\_\+t path)
+\begin{DoxyCompactList}\small\item\em rest api endpoint 핸들 반환 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classchkchk_1_1Endpoint_a6c07b57c4c28d8f1a8393947b8d76ad1}{get}} (web\+::http\+::http\+\_\+request message)
+\item 
+void \mbox{\hyperlink{classchkchk_1_1Endpoint_af45278a6507f58b0e8439828e2ac7a19}{put}} (web\+::http\+::http\+\_\+request message)
+\item 
+void \mbox{\hyperlink{classchkchk_1_1Endpoint_a9bea1a169c63b2ee9c84c6b2eba86d0c}{post}} (web\+::http\+::http\+\_\+request message)
+\item 
+void \mbox{\hyperlink{classchkchk_1_1Endpoint_a1e811ae341ead064bfad2035fb54f713}{del}} (web\+::http\+::http\+\_\+request message)
+\item 
+void \mbox{\hyperlink{classchkchk_1_1Endpoint_a8d295b433f06c0d58b6bdd2c4853d751}{callapi}} (\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937f}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}} method, web\+::http\+::http\+\_\+request message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+web\+::http\+::experimental\+::listener\+::http\+\_\+listener \mbox{\hyperlink{classchkchk_1_1Endpoint_a5fa632c478317c17f5cc2ff6ff5181c3}{\+\_\+listener}}
+\begin{DoxyCompactList}\small\item\em cpprestsdk A\+PI 서버 리스너 \end{DoxyCompactList}\item 
+std\+::map$<$ utility\+::string\+\_\+t, \mbox{\hyperlink{namespacechkchk_ad5edf8c716b39df35ac77fc7e8cfbf9f}{endpoint\+\_\+handler\+\_\+t}} $>$ \mbox{\hyperlink{classchkchk_1_1Endpoint_a562f4435454ba0d8e61e3769deb534ec}{\+\_\+tables}} \mbox{[}\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937fa985ee34532cafb0a52578afb53ccc9ab}{A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em A\+PI 동작 정의 테이블 (G\+E\+T/\+P\+O\+S\+T/\+P\+U\+T/\+D\+EL 각 각 정의) \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classchkchk_1_1Endpoint_ac074779e09d18154bc766ff702bc186a}{\+\_\+listen\+\_\+thread\+\_\+num}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{상세한 설명}
+\mbox{\hyperlink{classchkchk_1_1Endpoint}{Endpoint}} 
+
+endpoint.\+h 파일의 38 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a98f734acc05014f6fecf53befad70b90}\label{classchkchk_1_1Endpoint_a98f734acc05014f6fecf53befad70b90}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!Endpoint@{Endpoint}}
+\index{Endpoint@{Endpoint}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{Endpoint()}{Endpoint()}}
+{\footnotesize\ttfamily Endpoint\+::\+Endpoint (\begin{DoxyParamCaption}\item[{utility\+::string\+\_\+t}]{url,  }\item[{size\+\_\+t}]{listen\+\_\+thread\+\_\+num = {\ttfamily 4} }\end{DoxyParamCaption})}
+
+T\+O\+DO\+: \href{https://github.com/microsoft/cpprestsdk/blob/master/Release/src/pplx/threadpool.cpp}{\texttt{ https\+://github.\+com/microsoft/cpprestsdk/blob/master/\+Release/src/pplx/threadpool.\+cpp}} initialize\+\_\+shared\+\_\+threadpool std\+::call\+\_\+once
+
+endpoint.\+cpp 파일의 12 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a2e4ec63bb2f86bf84725a1f85c66c945}\label{classchkchk_1_1Endpoint_a2e4ec63bb2f86bf84725a1f85c66c945}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!````~Endpoint@{$\sim$Endpoint}}
+\index{````~Endpoint@{$\sim$Endpoint}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{$\sim$Endpoint()}{~Endpoint()}}
+{\footnotesize\ttfamily chkchk\+::\+Endpoint\+::$\sim$\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+endpoint.\+h 파일의 56 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 함수 문서화}
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a67ccfb626e00cf065b7d6bfe840cecd5}\label{classchkchk_1_1Endpoint_a67ccfb626e00cf065b7d6bfe840cecd5}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!addEndpoint@{addEndpoint}}
+\index{addEndpoint@{addEndpoint}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{addEndpoint()}{addEndpoint()}}
+{\footnotesize\ttfamily bool Endpoint\+::add\+Endpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937f}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}]{method,  }\item[{const utility\+::string\+\_\+t}]{path,  }\item[{\mbox{\hyperlink{namespacechkchk_ad5edf8c716b39df35ac77fc7e8cfbf9f}{endpoint\+\_\+handler\+\_\+t}}}]{handle }\end{DoxyParamCaption})}
+
+
+
+rest api 서비스 등록 
+
+
+\begin{DoxyParams}{매개변수}
+{\em method} & G\+ET, P\+UT, P\+O\+ST, D\+EL \\
+\hline
+{\em path} & endpoint U\+RL \\
+\hline
+{\em handle} & rest api 동작 함수 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+endpoint.\+cpp 파일의 40 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a8d295b433f06c0d58b6bdd2c4853d751}\label{classchkchk_1_1Endpoint_a8d295b433f06c0d58b6bdd2c4853d751}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!callapi@{callapi}}
+\index{callapi@{callapi}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{callapi()}{callapi()}}
+{\footnotesize\ttfamily void Endpoint\+::callapi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937f}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}]{method,  }\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+parameters
+
+query
+
+merge parameters + query
+
+endpoint.\+cpp 파일의 70 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a756003bcc3929f70ded6584ddc7f6834}\label{classchkchk_1_1Endpoint_a756003bcc3929f70ded6584ddc7f6834}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!close@{close}}
+\index{close@{close}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily pplx\+::task$<$void$>$ chkchk\+::\+Endpoint\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+rest api 서버 종료 
+
+\begin{DoxyReturn}{반환값}
+pplx\+::task$<$void$>$ 
+\end{DoxyReturn}
+
+
+endpoint.\+h 파일의 96 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a1e811ae341ead064bfad2035fb54f713}\label{classchkchk_1_1Endpoint_a1e811ae341ead064bfad2035fb54f713}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!del@{del}}
+\index{del@{del}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}}
+{\footnotesize\ttfamily void Endpoint\+::del (\begin{DoxyParamCaption}\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+endpoint.\+cpp 파일의 64 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a6eb516954f062365567c5c4ed1097edb}\label{classchkchk_1_1Endpoint_a6eb516954f062365567c5c4ed1097edb}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!endpointTables@{endpointTables}}
+\index{endpointTables@{endpointTables}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{endpointTables()}{endpointTables()}}
+{\footnotesize\ttfamily std\+::string chkchk\+::\+Endpoint\+::endpoint\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+endpoint.\+h 파일의 58 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a6c07b57c4c28d8f1a8393947b8d76ad1}\label{classchkchk_1_1Endpoint_a6c07b57c4c28d8f1a8393947b8d76ad1}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!get@{get}}
+\index{get@{get}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily void Endpoint\+::get (\begin{DoxyParamCaption}\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+endpoint.\+cpp 파일의 68 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a7bbbc03ba7d2cb9cde3b5b5bad963a0c}\label{classchkchk_1_1Endpoint_a7bbbc03ba7d2cb9cde3b5b5bad963a0c}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!getEndpoint@{getEndpoint}}
+\index{getEndpoint@{getEndpoint}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{getEndpoint()}{getEndpoint()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacechkchk_ad5edf8c716b39df35ac77fc7e8cfbf9f}{endpoint\+\_\+handler\+\_\+t}} $\ast$ Endpoint\+::get\+Endpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937f}{A\+P\+I\+\_\+\+M\+E\+T\+H\+OD}}}]{method,  }\item[{const utility\+::string\+\_\+t}]{path }\end{DoxyParamCaption})}
+
+
+
+rest api endpoint 핸들 반환 
+
+
+\begin{DoxyParams}{매개변수}
+{\em method} & \\
+\hline
+{\em path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+endpoint\+\_\+handler\+\_\+t$\ast$ 
+\end{DoxyReturn}
+
+
+endpoint.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a63bb00429d6349a5e400548b13d907ed}\label{classchkchk_1_1Endpoint_a63bb00429d6349a5e400548b13d907ed}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!open@{open}}
+\index{open@{open}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily pplx\+::task$<$void$>$ chkchk\+::\+Endpoint\+::open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+rest api 서버 시작 
+
+\begin{DoxyReturn}{반환값}
+pplx\+::task$<$void$>$ 
+\end{DoxyReturn}
+
+
+endpoint.\+h 파일의 90 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a9bea1a169c63b2ee9c84c6b2eba86d0c}\label{classchkchk_1_1Endpoint_a9bea1a169c63b2ee9c84c6b2eba86d0c}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!post@{post}}
+\index{post@{post}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily void Endpoint\+::post (\begin{DoxyParamCaption}\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+endpoint.\+cpp 파일의 60 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_af45278a6507f58b0e8439828e2ac7a19}\label{classchkchk_1_1Endpoint_af45278a6507f58b0e8439828e2ac7a19}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!put@{put}}
+\index{put@{put}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily void Endpoint\+::put (\begin{DoxyParamCaption}\item[{web\+::http\+::http\+\_\+request}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+endpoint.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
+
+
+
+\doxysubsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_ac074779e09d18154bc766ff702bc186a}\label{classchkchk_1_1Endpoint_ac074779e09d18154bc766ff702bc186a}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!\_listen\_thread\_num@{\_listen\_thread\_num}}
+\index{\_listen\_thread\_num@{\_listen\_thread\_num}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{\_listen\_thread\_num}{\_listen\_thread\_num}}
+{\footnotesize\ttfamily size\+\_\+t chkchk\+::\+Endpoint\+::\+\_\+listen\+\_\+thread\+\_\+num\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+endpoint.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a5fa632c478317c17f5cc2ff6ff5181c3}\label{classchkchk_1_1Endpoint_a5fa632c478317c17f5cc2ff6ff5181c3}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!\_listener@{\_listener}}
+\index{\_listener@{\_listener}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{\_listener}{\_listener}}
+{\footnotesize\ttfamily web\+::http\+::experimental\+::listener\+::http\+\_\+listener chkchk\+::\+Endpoint\+::\+\_\+listener\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+cpprestsdk A\+PI 서버 리스너 
+
+
+
+endpoint.\+h 파일의 48 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{classchkchk_1_1Endpoint_a562f4435454ba0d8e61e3769deb534ec}\label{classchkchk_1_1Endpoint_a562f4435454ba0d8e61e3769deb534ec}} 
+\index{chkchk::Endpoint@{chkchk::Endpoint}!\_tables@{\_tables}}
+\index{\_tables@{\_tables}!chkchk::Endpoint@{chkchk::Endpoint}}
+\doxysubsubsection{\texorpdfstring{\_tables}{\_tables}}
+{\footnotesize\ttfamily std\+::map$<$utility\+::string\+\_\+t, \mbox{\hyperlink{namespacechkchk_ad5edf8c716b39df35ac77fc7e8cfbf9f}{endpoint\+\_\+handler\+\_\+t}}$>$ chkchk\+::\+Endpoint\+::\+\_\+tables\mbox{[}\mbox{\hyperlink{namespacechkchk_a77389a46f504d7412fad04a4e71c937fa985ee34532cafb0a52578afb53ccc9ab}{A\+P\+I\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+I\+ZE}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A\+PI 동작 정의 테이블 (G\+E\+T/\+P\+O\+S\+T/\+P\+U\+T/\+D\+EL 각 각 정의) 
+
+
+
+endpoint.\+h 파일의 50 번째 라인에서 정의되었습니다.
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{endpoint_8h}{endpoint.\+h}}\item 
+src/\mbox{\hyperlink{endpoint_8cpp}{endpoint.\+cpp}}\end{DoxyCompactItemize}
