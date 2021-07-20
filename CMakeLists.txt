@@ -61,9 +61,9 @@ endif (DOXYGEN_FOUND)
 ###############################
 # for test
 ###############################
-set(BUILD_TESTING ${ORG_BUILD_TESTING})
-if (BUILD_TESTING)
-    enable_testing()
-    add_subdirectory(test)
-endif()
+#set(BUILD_TESTING ${ORG_BUILD_TESTING})
+#if (BUILD_TESTING)
+#    enable_testing()
+#    add_subdirectory(test)
+#endif()
 
