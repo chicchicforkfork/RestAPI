@@ -1,4 +1,4 @@
-# Install script for directory: /home/secui/git/RestAPI/build/_deps/nlohmann-src
+# Install script for directory: /home/secui/gg/RestAPI/build/_deps/nlohmann-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,13 +38,13 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/secui/git/RestAPI/build/_deps/nlohmann-src/single_include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/secui/gg/RestAPI/build/_deps/nlohmann-src/single_include/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/nlohmann_json" TYPE FILE FILES
-    "/home/secui/git/RestAPI/build/_deps/nlohmann-build/nlohmann_jsonConfig.cmake"
-    "/home/secui/git/RestAPI/build/_deps/nlohmann-build/nlohmann_jsonConfigVersion.cmake"
+    "/home/secui/gg/RestAPI/build/_deps/nlohmann-build/nlohmann_jsonConfig.cmake"
+    "/home/secui/gg/RestAPI/build/_deps/nlohmann-build/nlohmann_jsonConfigVersion.cmake"
     )
 endif()
 
@@ -52,7 +52,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake"
-         "/home/secui/git/RestAPI/build/_deps/nlohmann-build/CMakeFiles/Export/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake")
+         "/home/secui/gg/RestAPI/build/_deps/nlohmann-build/CMakeFiles/Export/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/nlohmann_json/nlohmann_jsonTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -61,10 +61,16 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/nlohmann_json" TYPE FILE FILES "/home/secui/git/RestAPI/build/_deps/nlohmann-build/CMakeFiles/Export/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/nlohmann_json" TYPE FILE FILES "/home/secui/gg/RestAPI/build/_deps/nlohmann-build/CMakeFiles/Export/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/secui/git/RestAPI/build/_deps/nlohmann-build/nlohmann_json.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/secui/gg/RestAPI/build/_deps/nlohmann-build/nlohmann_json.pc")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/secui/gg/RestAPI/build/_deps/nlohmann-build/test/cmake_install.cmake")
+
 endif()
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/secui/git/RestAPI
+CMAKE_SOURCE_DIR = /home/secui/gg/RestAPI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/secui/git/RestAPI/build
+CMAKE_BINARY_DIR = /home/secui/gg/RestAPI/build
 
 # Utility rule file for restapi_doxygen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/secui/git/RestAPI/build
 include CMakeFiles/restapi_doxygen.dir/progress.make
 
 CMakeFiles/restapi_doxygen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/secui/git/RestAPI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
-	cd /home/secui/git/RestAPI && /usr/bin/doxygen /home/secui/git/RestAPI/Doxyfile
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/secui/gg/RestAPI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
+	cd /home/secui/gg/RestAPI && /usr/bin/doxygen /home/secui/gg/RestAPI/Doxyfile
 
 restapi_doxygen: CMakeFiles/restapi_doxygen
 restapi_doxygen: CMakeFiles/restapi_doxygen.dir/build.make
@@ -72,6 +72,6 @@ CMakeFiles/restapi_doxygen.dir/clean:
 .PHONY : CMakeFiles/restapi_doxygen.dir/clean
 
 CMakeFiles/restapi_doxygen.dir/depend:
-	cd /home/secui/git/RestAPI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/secui/git/RestAPI /home/secui/git/RestAPI /home/secui/git/RestAPI/build /home/secui/git/RestAPI/build /home/secui/git/RestAPI/build/CMakeFiles/restapi_doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/secui/gg/RestAPI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/secui/gg/RestAPI /home/secui/gg/RestAPI /home/secui/gg/RestAPI/build /home/secui/gg/RestAPI/build /home/secui/gg/RestAPI/build/CMakeFiles/restapi_doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/restapi_doxygen.dir/depend
 

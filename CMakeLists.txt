@@ -1,8 +1,5 @@
 project(restapi)
 
-set(ORG_BUILD_TESTING ${BUILD_TESTING})
-set(BUILD_TESTING OFF)
-
 cmake_minimum_required(VERSION 3.16)
 set(CMAKE_CXX_COMPILER /usr/bin/c++)
 set(CMAKE_CXX_FLAGS "-m64 -std=c++17")
@@ -56,14 +53,3 @@ if (DOXYGEN_FOUND)
 else (DOXYGEN_FOUND)
     message("Doxygen need to be installed to generate the doxygen documentation")
 endif (DOXYGEN_FOUND)
-
-
-###############################
-# for test
-###############################
-#set(BUILD_TESTING ${ORG_BUILD_TESTING})
-#if (BUILD_TESTING)
-#    enable_testing()
-#    add_subdirectory(test)
-#endif()
-

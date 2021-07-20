@@ -1,1 +1,0 @@
-/usr/bin/c++  -m64 -std=c++17   CMakeFiles/restapi_unit_test.dir/test_restapi.cpp.o  -o restapi_unit_test  -Wl,-rpath,/home/secui/git/RestAPI/build ../librestapi.so ../lib/libgtest_main.a -lcpprest -lssl -lcrypto ../lib/libgtest.a -lpthread 

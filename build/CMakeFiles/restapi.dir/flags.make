@@ -6,5 +6,5 @@ CXX_FLAGS = -m64 -std=c++17 -fPIC   -W -Wall -g -fpermissive
 
 CXX_DEFINES = -Drestapi_EXPORTS
 
-CXX_INCLUDES = -I/home/secui/git/RestAPI/include -I/home/secui/git/RestAPI/build/_deps/nlohmann-src/include 
+CXX_INCLUDES = -I/home/secui/gg/RestAPI/include -I/home/secui/gg/RestAPI/build/_deps/nlohmann-src/include 
 

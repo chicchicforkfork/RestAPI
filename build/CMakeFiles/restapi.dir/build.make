@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/secui/git/RestAPI
+CMAKE_SOURCE_DIR = /home/secui/gg/RestAPI
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/secui/git/RestAPI/build
+CMAKE_BINARY_DIR = /home/secui/gg/RestAPI/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/restapi.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/restapi.dir/flags.make
 
 CMakeFiles/restapi.dir/src/endpoint.cpp.o: CMakeFiles/restapi.dir/flags.make
 CMakeFiles/restapi.dir/src/endpoint.cpp.o: ../src/endpoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/secui/git/RestAPI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/restapi.dir/src/endpoint.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/restapi.dir/src/endpoint.cpp.o -c /home/secui/git/RestAPI/src/endpoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/secui/gg/RestAPI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/restapi.dir/src/endpoint.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/restapi.dir/src/endpoint.cpp.o -c /home/secui/gg/RestAPI/src/endpoint.cpp
 
 CMakeFiles/restapi.dir/src/endpoint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/restapi.dir/src/endpoint.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/secui/git/RestAPI/src/endpoint.cpp > CMakeFiles/restapi.dir/src/endpoint.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/secui/gg/RestAPI/src/endpoint.cpp > CMakeFiles/restapi.dir/src/endpoint.cpp.i
 
 CMakeFiles/restapi.dir/src/endpoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/restapi.dir/src/endpoint.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/secui/git/RestAPI/src/endpoint.cpp -o CMakeFiles/restapi.dir/src/endpoint.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/secui/gg/RestAPI/src/endpoint.cpp -o CMakeFiles/restapi.dir/src/endpoint.cpp.s
 
 CMakeFiles/restapi.dir/src/restapi.cpp.o: CMakeFiles/restapi.dir/flags.make
 CMakeFiles/restapi.dir/src/restapi.cpp.o: ../src/restapi.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/secui/git/RestAPI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/restapi.dir/src/restapi.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/restapi.dir/src/restapi.cpp.o -c /home/secui/git/RestAPI/src/restapi.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/secui/gg/RestAPI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/restapi.dir/src/restapi.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/restapi.dir/src/restapi.cpp.o -c /home/secui/gg/RestAPI/src/restapi.cpp
 
 CMakeFiles/restapi.dir/src/restapi.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/restapi.dir/src/restapi.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/secui/git/RestAPI/src/restapi.cpp > CMakeFiles/restapi.dir/src/restapi.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/secui/gg/RestAPI/src/restapi.cpp > CMakeFiles/restapi.dir/src/restapi.cpp.i
 
 CMakeFiles/restapi.dir/src/restapi.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/restapi.dir/src/restapi.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/secui/git/RestAPI/src/restapi.cpp -o CMakeFiles/restapi.dir/src/restapi.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/secui/gg/RestAPI/src/restapi.cpp -o CMakeFiles/restapi.dir/src/restapi.cpp.s
 
 # Object files for target restapi
 restapi_OBJECTS = \
@@ -95,7 +95,7 @@ librestapi.so: CMakeFiles/restapi.dir/src/endpoint.cpp.o
 librestapi.so: CMakeFiles/restapi.dir/src/restapi.cpp.o
 librestapi.so: CMakeFiles/restapi.dir/build.make
 librestapi.so: CMakeFiles/restapi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/secui/git/RestAPI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library librestapi.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/secui/gg/RestAPI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library librestapi.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/restapi.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/restapi.dir/clean:
 .PHONY : CMakeFiles/restapi.dir/clean
 
 CMakeFiles/restapi.dir/depend:
-	cd /home/secui/git/RestAPI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/secui/git/RestAPI /home/secui/git/RestAPI /home/secui/git/RestAPI/build /home/secui/git/RestAPI/build /home/secui/git/RestAPI/build/CMakeFiles/restapi.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/secui/gg/RestAPI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/secui/gg/RestAPI /home/secui/gg/RestAPI /home/secui/gg/RestAPI/build /home/secui/gg/RestAPI/build /home/secui/gg/RestAPI/build/CMakeFiles/restapi.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/restapi.dir/depend
 

@@ -32,17 +32,17 @@ endpoint.h
 iostream
 -
 
-/home/secui/git/RestAPI/src/endpoint.cpp
+/home/secui/gg/RestAPI/src/endpoint.cpp
 endpoint.h
-/home/secui/git/RestAPI/src/endpoint.h
+/home/secui/gg/RestAPI/src/endpoint.h
 cpprest/http_listener.h
 -
 pplx/threadpool.h
 -
 
-/home/secui/git/RestAPI/src/restapi.cpp
+/home/secui/gg/RestAPI/src/restapi.cpp
 restapi.h
-/home/secui/git/RestAPI/src/restapi.h
+/home/secui/gg/RestAPI/src/restapi.h
 pthread.h
 -
 

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/secui/git/RestAPI/src/endpoint.cpp" "/home/secui/git/RestAPI/build/CMakeFiles/restapi.dir/src/endpoint.cpp.o"
-  "/home/secui/git/RestAPI/src/restapi.cpp" "/home/secui/git/RestAPI/build/CMakeFiles/restapi.dir/src/restapi.cpp.o"
+  "/home/secui/gg/RestAPI/src/endpoint.cpp" "/home/secui/gg/RestAPI/build/CMakeFiles/restapi.dir/src/endpoint.cpp.o"
+  "/home/secui/gg/RestAPI/src/restapi.cpp" "/home/secui/gg/RestAPI/build/CMakeFiles/restapi.dir/src/restapi.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

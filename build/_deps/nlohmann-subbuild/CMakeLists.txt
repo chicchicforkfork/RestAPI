@@ -12,8 +12,8 @@ project(nlohmann-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(nlohmann-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/nlohmann/json.git" "GIT_TAG" "master"
-                    SOURCE_DIR          "/home/secui/git/RestAPI/build/_deps/nlohmann-src"
-                    BINARY_DIR          "/home/secui/git/RestAPI/build/_deps/nlohmann-build"
+                    SOURCE_DIR          "/home/secui/gg/RestAPI/build/_deps/nlohmann-src"
+                    BINARY_DIR          "/home/secui/gg/RestAPI/build/_deps/nlohmann-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

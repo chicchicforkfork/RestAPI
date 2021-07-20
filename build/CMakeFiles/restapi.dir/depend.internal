@@ -3,8 +3,8 @@
 
 CMakeFiles/restapi.dir/src/endpoint.cpp.o
  ../include/endpoint.h
- /home/secui/git/RestAPI/src/endpoint.cpp
+ /home/secui/gg/RestAPI/src/endpoint.cpp
 CMakeFiles/restapi.dir/src/restapi.cpp.o
  ../include/endpoint.h
  ../include/restapi.h
- /home/secui/git/RestAPI/src/restapi.cpp
+ /home/secui/gg/RestAPI/src/restapi.cpp

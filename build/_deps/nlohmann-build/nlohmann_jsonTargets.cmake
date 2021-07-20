@@ -51,7 +51,7 @@ add_library(nlohmann_json::nlohmann_json INTERFACE IMPORTED)
 set_target_properties(nlohmann_json::nlohmann_json PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "JSON_USE_IMPLICIT_CONVERSIONS=\$<BOOL:ON>"
   INTERFACE_COMPILE_FEATURES "cxx_std_11"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/secui/git/RestAPI/build/_deps/nlohmann-src/single_include/"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/secui/gg/RestAPI/build/_deps/nlohmann-src/single_include/"
 )
 
 # This file does not depend on other imported targets which have
