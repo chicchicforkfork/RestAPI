@@ -10,5 +10,6 @@ PRIVATE
 
 target_link_libraries(test_restapi
 PRIVATE
-  restapi  
+  restapi
+  pthread
 )
