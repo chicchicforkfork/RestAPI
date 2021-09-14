@@ -9,7 +9,7 @@ using namespace chkchk;
 
 int main() {
   RestApi api("http://127.0.0.1:9999", "test");
-  auto f = [](const http::http_request &r, const nlohmann::json &v) {
+  auto f = [](const http::http_request &r, nlohmann::json &v) {
     (void)r;
     cout << "v: " << v << endl;
 

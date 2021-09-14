@@ -19,7 +19,7 @@ namespace chkchk {
  */
 typedef std::function<       //
     const utility::string_t( //
-        const web::http::http_request &, const nlohmann::json &)>
+        const web::http::http_request &, nlohmann::json &)>
     endpoint_handler_t;
 
 /**
