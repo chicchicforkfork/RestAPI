@@ -10,6 +10,7 @@
 #include "cpprest/uri.h"
 #include <functional>
 #include <map>
+#include <nlohmann/json.hpp>
 
 namespace chkchk {
 
@@ -18,7 +19,7 @@ namespace chkchk {
  */
 typedef std::function<       //
     const utility::string_t( //
-        const web::http::http_request &, const web::json::value &)>
+        const web::http::http_request &, const nlohmann::json &)>
     endpoint_handler_t;
 
 /**
@@ -42,7 +43,7 @@ private:
   void put(web::http::http_request message);
   void post(web::http::http_request message);
   void del(web::http::http_request message);
-  void callapi(API_METHOD method, web::http::http_request message);
+  void callapi(API_METHOD method, web::http::http_request &message);
 
   /// cpprestsdk API 서버 리스너
   web::http::experimental::listener::http_listener _listener;

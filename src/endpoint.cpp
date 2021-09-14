@@ -28,13 +28,20 @@ Endpoint::Endpoint(utility::string_t url, size_t listen_thread_num) //
                     bind(&Endpoint::del, this, placeholders::_1));
 }
 
-static json::value &appendJSON( //
-    json::value &json, const map<string_t, string_t> &map) {
-
-  for (auto m : map) {
-    json[m.first] = json::value::parse(m.second);
+static nlohmann::json &appendJSON(nlohmann::json &jout,
+                                  const json::value &jin) {
+  if (!jin.is_null()) {
+    jout.update(nlohmann::json::parse(jin.serialize()));
   }
-  return json;
+  return jout;
+}
+
+static nlohmann::json &appendJSON(nlohmann::json &jout,
+                                  const map<string_t, string_t> &map) {
+  for (auto m : map) {
+    jout[m.first] = m.second;
+  }
+  return jout;
 }
 
 bool Endpoint::addEndpoint(API_METHOD method,            //
@@ -67,19 +74,33 @@ void Endpoint::put(http_request message) { return callapi(API_PUT, message); };
 
 void Endpoint::get(http_request message) { return callapi(API_GET, message); }
 
-void Endpoint::callapi(API_METHOD method, http_request message) {
+void Endpoint::callapi(API_METHOD method, http_request &message) {
   endpoint_handler_t *endpoint = NULL;
   string_t url = http::uri::decode(message.relative_uri().path());
   string_t resp = "";
 
   endpoint = getEndpoint(method, url);
   if (endpoint) {
-    /// parameters
-    auto p = message.extract_json().get();
-    /// query
-    const auto &q = http::uri::split_query(message.relative_uri().query());
-    /// merge parameters + query
-    resp = (*endpoint)(message, appendJSON(p, q));
+    nlohmann::json params;
+    try {
+      const auto &p = message.extract_json().get();
+      params = appendJSON(params, p);
+    } catch (http_exception &e) {
+      // cerr << "[extract_json] " << e.what() << "\n";
+    }
+    try {
+      const auto &p = http::uri::split_query(message.extract_string().get());
+      params = appendJSON(params, p);
+    } catch (http_exception &e) {
+      // cerr << "[extract_string] " << e.what() << "\n";
+    }
+    try {
+      const auto &p = http::uri::split_query(message.relative_uri().query());
+      params = appendJSON(params, p);
+    } catch (http_exception &e) {
+      // cerr << "[relative_uri] " << e.what() << "\n";
+    }
+    resp = (*endpoint)(message, params);
   }
 
   if (resp == "") {
