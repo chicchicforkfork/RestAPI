@@ -86,6 +86,11 @@ void Endpoint::options(http_request message) { //
   return callapi(API_OPTIONS, message);
 }
 
+const string method_name(API_METHOD method) {
+  static vector<string> ms{"GET", "PUT", "POST", "DEL", "OPTIONS"};
+  return ms[method];
+}
+
 void Endpoint::callapi(API_METHOD method, http_request &message) {
   endpoint_handler_t *endpoint = NULL;
   string_t url = http::uri::decode(message.relative_uri().path());
@@ -115,11 +120,15 @@ void Endpoint::callapi(API_METHOD method, http_request &message) {
     resp = (*endpoint)(message, params);
   }
 
+  http_response response;
   if (resp == "") {
-    // ucout << "404" << endl;
-    message.reply(status_codes::NotFound);
+    response.set_status_code(status_codes::NotFound);
   } else {
-    // ucout << resp << endl;
-    message.reply(status_codes::OK, resp);
+    response.set_body(resp);
+    response.headers().add("Access-Control-Allow-Origin", "*");
+    response.headers().add("Access-Control-Allow-Methods", method_name(method));
+    response.headers().add("Access-Control-Allow-Headers", "application/json");
+    response.set_status_code(status_codes::OK);
   }
+  message.reply(response);
 }
