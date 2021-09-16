@@ -26,6 +26,8 @@ Endpoint::Endpoint(utility::string_t url, size_t listen_thread_num) //
                     bind(&Endpoint::post, this, placeholders::_1));
   _listener.support(methods::DEL, //
                     bind(&Endpoint::del, this, placeholders::_1));
+  _listener.support(methods::OPTIONS, //
+                    bind(&Endpoint::options, this, placeholders::_1));
 }
 
 static nlohmann::json &appendJSON(nlohmann::json &jout,
@@ -68,11 +70,21 @@ void Endpoint::post(http_request message) {
   return callapi(API_POST, message);
 };
 
-void Endpoint::del(http_request message) { return callapi(API_DEL, message); };
+void Endpoint::del(http_request message) { //
+  return callapi(API_DEL, message);
+};
 
-void Endpoint::put(http_request message) { return callapi(API_PUT, message); };
+void Endpoint::put(http_request message) { //
+  return callapi(API_PUT, message);
+};
 
-void Endpoint::get(http_request message) { return callapi(API_GET, message); }
+void Endpoint::get(http_request message) { //
+  return callapi(API_GET, message);
+}
+
+void Endpoint::options(http_request message) { //
+  return callapi(API_OPTIONS, message);
+}
 
 void Endpoint::callapi(API_METHOD method, http_request &message) {
   endpoint_handler_t *endpoint = NULL;

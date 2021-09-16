@@ -30,6 +30,7 @@ enum API_METHOD { //
   API_PUT,
   API_POST,
   API_DEL,
+  API_OPTIONS,
   API_METHOD_SIZE
 };
 
@@ -43,6 +44,7 @@ private:
   void put(web::http::http_request message);
   void post(web::http::http_request message);
   void del(web::http::http_request message);
+  void options(web::http::http_request message);
   void callapi(API_METHOD method, web::http::http_request &message);
 
   /// cpprestsdk API 서버 리스너
