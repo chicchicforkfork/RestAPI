@@ -87,7 +87,7 @@ void Endpoint::options(http_request message) { //
 }
 
 const string method_name(API_METHOD method) {
-  static vector<string> ms{"GET", "PUT", "POST", "DEL", "OPTIONS"};
+  static vector<string> ms{"GET", "PUT", "POST", "DELETE", "OPTIONS"};
   return ms[method];
 }
 
