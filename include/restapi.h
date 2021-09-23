@@ -22,7 +22,8 @@ public:
    * @brief RestAPI 생성자
    * @param address
    */
-  RestApi(const std::string &address, const std::string &name);
+  RestApi(const std::string &address, const std::string &name,
+          size_t listen_thread_num = 4);
 
   /**
    * @brief RestAPI 소멸자

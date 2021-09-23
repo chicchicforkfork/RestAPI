@@ -9,14 +9,7 @@ using namespace utility;
 using namespace http::experimental::listener;
 using namespace chkchk;
 
-Endpoint::Endpoint(utility::string_t url, size_t listen_thread_num) //
-    : _listener(url),                                               //
-      _listen_thread_num(listen_thread_num) {
-  /// TODO:
-  /// https://github.com/microsoft/cpprestsdk/blob/master/Release/src/pplx/threadpool.cpp
-  /// initialize_shared_threadpool
-  /// std::call_once
-  crossplat::threadpool::initialize_with_threads(_listen_thread_num);
+Endpoint::Endpoint(utility::string_t url) : _listener(url) {
 
   _listener.support(methods::GET, //
                     bind(&Endpoint::get, this, placeholders::_1));

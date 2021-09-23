@@ -55,7 +55,7 @@ private:
   size_t _listen_thread_num;
 
 public:
-  Endpoint(utility::string_t url, size_t listen_thread_num = 4);
+  Endpoint(utility::string_t url);
   ~Endpoint() {}
 
   std::string endpointTables() {

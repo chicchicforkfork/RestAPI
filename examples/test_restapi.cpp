@@ -8,7 +8,7 @@ using namespace utility;
 using namespace chkchk;
 
 int main() {
-  RestApi api("http://127.0.0.1:9999", "test");
+  RestApi api("http://127.0.0.1:9999", "test", 16);
   auto f = [](const http::http_request &r, nlohmann::json &v) {
     (void)r;
     cout << "v: " << v << endl;

@@ -1,4 +1,5 @@
 #include "restapi.h"
+#include <pplx/threadpool.h>
 #include <pthread.h>
 /*
  * reference
@@ -13,9 +14,16 @@ using namespace utility;
 using namespace http::experimental::listener;
 using namespace chkchk;
 
-RestApi::RestApi(const string &address, const string &name) //
+RestApi::RestApi(const string &address, const string &name,
+                 size_t listen_thread_num) //
     : _name(name) {
   setAddress(address);
+
+  /// TODO:
+  /// https://github.com/microsoft/cpprestsdk/blob/master/Release/src/pplx/threadpool.cpp
+  /// initialize_shared_threadpool
+  /// std::call_once
+  crossplat::threadpool::initialize_with_threads(listen_thread_num);
 }
 
 RestApi::~RestApi() {
