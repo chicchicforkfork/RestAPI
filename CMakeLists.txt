@@ -13,7 +13,7 @@ FetchContent_Declare(nlohmann
 )
 FetchContent_MakeAvailable(nlohmann)
 
-find_package(cpprestsdk REQUIRED)
+#find_package(cpprestsdk REQUIRED)
 
 include_directories(include)
 
