@@ -26,7 +26,8 @@ Endpoint::Endpoint(utility::string_t url) : _listener(url) {
 static nlohmann::json &appendJSON(nlohmann::json &jout,
                                   const json::value &jin) {
   if (!jin.is_null()) {
-    jout.update(nlohmann::json::parse(jin.serialize()));
+    string_t decode = http::uri::decode(jin.serialize());
+    jout.update(nlohmann::json::parse(decode));
   }
   return jout;
 }
@@ -34,7 +35,9 @@ static nlohmann::json &appendJSON(nlohmann::json &jout,
 static nlohmann::json &appendJSON(nlohmann::json &jout,
                                   const map<string_t, string_t> &map) {
   for (auto m : map) {
-    jout[m.first] = m.second;
+    string_t k_decode = http::uri::decode(m.first);
+    string_t d_decode = http::uri::decode(m.second);
+    jout[k_decode] = d_decode;
   }
   return jout;
 }
@@ -84,10 +87,35 @@ const string method_name(API_METHOD method) {
   return ms[method];
 }
 
+API_METHOD method_name(const string method) {
+  if (method == "GET") {
+    return API_METHOD::API_GET;
+  } else if (method == "PUT") {
+    return API_METHOD::API_PUT;
+  } else if (method == "POST") {
+    return API_METHOD::API_POST;
+  } else if (method == "DELETE") {
+    return API_METHOD::API_DEL;
+  } else if (method == "OPTIONS") {
+    return API_METHOD::API_OPTIONS;
+  }
+  return API_METHOD::API_UNKNOWN;
+}
+
 void Endpoint::callapi(API_METHOD method, http_request &message) {
   endpoint_handler_t *endpoint = NULL;
   string_t url = http::uri::decode(message.relative_uri().path());
   string_t resp = "";
+
+  if (method == API_METHOD::API_OPTIONS) {
+    auto origin_method =
+        message.headers().find("Access-Control-Request-Method");
+    if (origin_method != message.headers().end()) {
+      // cout << (*origin_method).first << "  " << (*origin_method).second <<
+      // endl;
+      method = method_name((*origin_method).second);
+    }
+  }
 
   endpoint = getEndpoint(method, url);
   if (endpoint) {
@@ -113,15 +141,16 @@ void Endpoint::callapi(API_METHOD method, http_request &message) {
     resp = (*endpoint)(message, params);
   }
 
-  http_response response;
+  http_response r;
   if (resp == "") {
-    response.set_status_code(status_codes::NotFound);
+    r.set_status_code(status_codes::NotFound);
   } else {
-    response.set_body(resp);
-    response.headers().add("Access-Control-Allow-Origin", "*");
-    response.headers().add("Access-Control-Allow-Methods", method_name(method));
-    response.headers().add("Access-Control-Allow-Headers", "application/json");
-    response.set_status_code(status_codes::OK);
+    r.set_body(resp);
+    r.headers().add("Access-Control-Allow-Origin", "*");
+    const char *all_method = "GET,PUT,POST,DELETE,PATCH,OPTIONS";
+    r.headers().add("Access-Control-Allow-Methods", all_method);
+    r.headers().add("Access-Control-Allow-Headers", "application/json");
+    r.set_status_code(status_codes::OK);
   }
-  message.reply(response);
+  message.reply(r);
 }
