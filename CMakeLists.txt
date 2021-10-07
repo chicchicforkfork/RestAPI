@@ -37,4 +37,4 @@ PUBLIC
     cpprest ssl crypto)
 
 
-add_subdirectory(examples)
+#add_subdirectory(examples)
